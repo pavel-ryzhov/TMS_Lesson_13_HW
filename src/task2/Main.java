@@ -9,7 +9,10 @@ import java.util.GregorianCalendar;
 public class Main {
     public static void main(String[] args) {
         Calendar calendar = new GregorianCalendar();
-        calendar.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
-        System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
+        if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.TUESDAY)
+            calendar.add(Calendar.DAY_OF_MONTH, 7);
+        else
+            calendar.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
+        System.out.println(calendar.getTime());
     }
 }
