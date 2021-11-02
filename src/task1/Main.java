@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
  */
 public class Main {
     public static void main(String[] args) {
-        String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-        System.out.println(daysOfWeek[new GregorianCalendar().get(Calendar.DAY_OF_WEEK) - 1]);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE");
+        System.out.println(simpleDateFormat.format(new Date()));
     }
 }
